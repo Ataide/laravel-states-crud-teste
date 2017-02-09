@@ -25,8 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-      $estados = Estado::paginate(1);    
-
+        $estados = Estado::paginate(10);
         return view('home', ['estados' => $estados]);
     }
 }

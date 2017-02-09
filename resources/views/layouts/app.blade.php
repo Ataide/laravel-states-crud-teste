@@ -61,6 +61,13 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
+
+                                    @if ( Entrust::hasRole('admin') )
+                                        <a href="{{ url('/roles') }}">
+                                            Permissões
+                                        </a>
+                                    @endif
+
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

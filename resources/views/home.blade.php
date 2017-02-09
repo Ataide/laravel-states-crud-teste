@@ -1,9 +1,35 @@
 @extends('layouts.app')
 
 @section('content')
+
+
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-2">
+                       
+            <ul class="list-group permissions">
+                Permissões do usuário:
+                @if (Auth::user()->can('create'))
+                    <li class="list-group-item list-group-item-success">Criar</li>
+                @endif
+
+                @if (Auth::user()->can('read'))
+                    <li class="list-group-item list-group-item-info">Ler</li>
+                @endif
+
+                @if (Auth::user()->can('update'))
+                    <li class="list-group-item list-group-item-warning">Editar</li>
+                @endif
+
+                @if (Auth::user()->can('delete'))
+                    <li class="list-group-item list-group-item-danger">Deletar</li>
+                @endif
+
+            </ul>
+        </div>
+
+
+        <div class="col-md-8">
             <div class="panel panel-default">
                 <div class="panel-heading clearfix">
                     <div class="title pull-left" style="    margin-top: 7px;">Lista de Estados</div>
@@ -28,7 +54,6 @@
                         <td>{{ $estado->nome }}</td>
                         <td>{{ $estado->sigla }}</td>
                         <td>{{ str_limit($estado->historico, $limit = 80, $end = '...') }}</td>
-
                       </tr>
                     @endforeach
 
