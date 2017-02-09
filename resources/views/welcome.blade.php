@@ -90,7 +90,7 @@
 
                 <div class="links">
                     <a href="{{ url('/login') }}"> Laravel + Blade </a>
-                    <a href="https://laracasts.com">Laravel(api) + VueJS</a>
+                    {{-- <a href="https://laracasts.com">Laravel(api) + VueJS</a> --}}
 
                 </div>
             </div>
