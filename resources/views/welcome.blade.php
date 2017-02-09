@@ -62,28 +62,36 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .description{
+                background: #ececec;
+                padding: 5px;
+                margin: 20px;
+            }
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+            {{-- @if (Route::has('login'))
                 <div class="top-right links">
                     <a href="{{ url('/login') }}">Login</a>
                     <a href="{{ url('/register') }}">Register</a>
                 </div>
-            @endif
+            @endif --}}
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Olá.
+                </div>
+                <div class="description">
+                    <p>
+                        O teste foi realizado seguindo 2 formas de desenvolvimento.
+                    </p>
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ url('/login') }}"> Laravel + Blade </a>
+                    <a href="https://laracasts.com">Laravel(api) + VueJS</a>
+
                 </div>
             </div>
         </div>
