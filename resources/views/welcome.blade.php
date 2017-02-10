@@ -93,6 +93,9 @@
                     <p>
                         Na primeira, foram realizados os requisitos sem a utilização de AJAX, já na segunda a parte do CRUD dos estados foram implementadas utilizando AJAX.
                     </p>
+                    <p>
+                        Foram criados também os grupos de tipos de usuarios e permissões. Que somente o administrador tem acesso.
+                    </p>
                 </div>
 
                 <div class="links">
