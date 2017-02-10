@@ -15,10 +15,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/home', function () {
   $estados = \App\Estado::paginate(10);
   return view('home', ['estados' => $estados]);
-});
+})->middleware('auth');
 
 // Permissions Routes
 Route::get('/users', 'PermissionController@getUsersPermissions');
