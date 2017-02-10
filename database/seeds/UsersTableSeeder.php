@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\User;
 
+
 class UsersTableSeeder extends Seeder
 {
     /**
@@ -13,7 +14,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
 
-      if (User::count() == 0 ) {        
+      if (User::count() == 0 ) {
         DB::table('users')->insert([
           'name' => 'Admin',
           'email' => 'admin@admin.com',

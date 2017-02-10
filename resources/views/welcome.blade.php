@@ -63,9 +63,13 @@
                 margin-bottom: 30px;
             }
             .description{
-                background: #ececec;
-                padding: 5px;
+                background: black;
+                color: white;
+                padding: 15px;
                 margin: 20px;
+                font-family: monospace;
+                width: 500px;
+                text-align: left;
             }
         </style>
     </head>
@@ -86,11 +90,14 @@
                     <p>
                         O teste foi realizado seguindo 2 formas de desenvolvimento.
                     </p>
+                    <p>
+                        Na primeira, foram realizados os requisitos sem a utilização de AJAX, já na segunda a parte do CRUD dos estados foram implementadas utilizando AJAX.
+                    </p>
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('/login') }}"> Laravel + Blade </a>
-                    {{-- <a href="https://laracasts.com">Laravel(api) + VueJS</a> --}}
+                    <a href="{{ url('/estados') }}"> Laravel + Blade </a>
+                    <a href="{{ url('/home') }}">Laravel + Blade(AJAX Version)</a>
 
                 </div>
             </div>

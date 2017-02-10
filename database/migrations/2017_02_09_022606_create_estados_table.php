@@ -5,6 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 
+
 class CreateEstadosTable extends Migration
 {
     /**
@@ -19,6 +20,7 @@ class CreateEstadosTable extends Migration
         $table->string('nome');
         $table->string('sigla');
         $table->longText('historico');
+        $table->timestamps();
       });
     }
 

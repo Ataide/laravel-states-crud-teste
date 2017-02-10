@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Response;
 use App\User;
 use App\Estado;
 use App\Role;
 use App\Permission;
 
-class HomeController extends Controller
+class EstadosController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -120,9 +121,9 @@ class HomeController extends Controller
    public function destroy($id)
    {
      $estado = Estado::find($id);
-     $nerd->delete();
+     $estado->delete();
+     return Response::json(['msg' => 'Deletado com sucesso'], 200);
 
-     return Redirect::to('estados');
    }
 
 

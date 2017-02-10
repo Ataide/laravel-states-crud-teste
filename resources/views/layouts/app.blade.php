@@ -63,9 +63,13 @@
                                     <li>
 
                                     @if ( Entrust::hasRole('admin') )
-                                        <a href="{{ url('/roles') }}">
+                                        <a href="{{ url('/users') }}">
+                                            Usuários
+                                        </a>
+                                        <a href="{{ url('/permissions') }}">
                                             Permissões
                                         </a>
+
                                     @endif
 
                                         <a href="{{ url('/logout') }}"
@@ -90,8 +94,10 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/main.js"></script>    
 
 </body>
 </html>
