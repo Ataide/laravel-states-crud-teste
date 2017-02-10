@@ -28,7 +28,7 @@
                         <div class="checkbox">
                           <label><input type="checkbox" name="ids_permissions[]" value="4" {{ (in_array('4', $group->permissions)) ? 'checked' : "" }}>Deletar</label>
                         </div>
-                        <button type="submit" name="button">Atualizar</button>
+                        <button type="submit" name="button" class="btn btn-primary">Atualizar</button>
 
                     </form>
 

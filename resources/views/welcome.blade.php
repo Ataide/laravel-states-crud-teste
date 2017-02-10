@@ -94,7 +94,19 @@
                         Na primeira, foram realizados os requisitos sem a utilização de AJAX, já na segunda a parte do CRUD dos estados foram implementadas utilizando AJAX.
                     </p>
                     <p>
-                        Foram criados também os grupos de tipos de usuarios e permissões. Que somente o administrador tem acesso.
+                        Foram criados também os grupos de tipos de usuarios e permissões. Que somente o administrador tem acesso. O acesso é pelo dropdown, clicando no nome do usuario logado atualmente no canto superior direito da tela.
+                    </p>
+                    <p>
+                        Existem 2 usuarios já cadastrados, um Administrador e um usuario normal.
+                    </p>
+                    <p>
+                        Administrador ->  email: admin@admin.com | password: admin
+                    </p>
+                    <p>
+                        Usuario ->  email: user@user.com | password: user
+                    </p>
+                    <p>
+                        Agora escolha uma opção abaixo e veja como ficou.
                     </p>
                 </div>
 
