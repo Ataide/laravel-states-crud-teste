@@ -24,7 +24,9 @@ class PermissionController extends Controller
 
     foreach ($users as $key => $value) {
       $result = DB::select('select roles.id from role_user inner join roles on (role_user.role_id = roles.id) inner join users on (role_user.user_id = users.id) where users.id = :id', ['id' => $value->id]);
-      $value['group_id'] = json_decode(json_encode($result), true)[0]['id'];
+      if($result){
+        $value['group_id'] = json_decode(json_encode($result), true)[0]['id'];
+      }
     }
 
     $groups = Role::all();
@@ -34,7 +36,7 @@ class PermissionController extends Controller
 
   public function setUsersPermissions(Request $request) {
     $params = $request->all();
-    Role::removeUserFromRoleGroup($params['id_usuario']);  
+    Role::removeUserFromRoleGroup($params['id_usuario']);
 
     if( isset($params['group_id']) ) {
       $role = Role::find($params['group_id']);

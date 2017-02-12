@@ -27,6 +27,7 @@
                           <input type="hidden" name="id_usuario" value="{{$user->id}}">
 
                           <select class="" name="group_id">
+                              <option> Selecione </option>
                               @foreach ($groups as $element)
                                   <option  value="{{$element->id}}"  {{ $element->id == $user->group_id ? 'selected' : "" }}>{{$element->display_name}}</option>
                               @endforeach
